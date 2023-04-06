@@ -3,15 +3,15 @@ import CardGroup from 'react-bootstrap/CardGroup';
 
 const Asuransi = (props) => {
     return (
-        <Card style={{display: "flex", flexDirection: "row"}}>
-            <Card.Img style={{width: "32px", margin: "auto", paddingTop: "10px", alignItems: "center"}} src={props.image} />
+        <Card style={{flexDirection: "row", border: "0.5px solid gray"}}>
+            <Card.Img style={{width: "34px", margin: "auto", alignItems: "center"}} src={props.image} />
             <Card.Body>
             <Card.Title style={{fontSize: "15px"}}>{props.title}</Card.Title>
-            <Card.Text>
+            <Card.Text style={{fontSize: "12px", color: "gray"}}>
                 {props.text}
             </Card.Text>
             </Card.Body>
-      </Card>
+        </Card>
     )
 }
 
