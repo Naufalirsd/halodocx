@@ -59,6 +59,8 @@ import Artikel from "./Artikel";
 import Artikel2 from "./Artikel2";
 import Artikel3 from "./Artikel3";
 
+import Artikelimg from "./../Assets/artikel1.webp"
+
 // Artikel png
 import Artikelpng1 from "./../Assets/artikel1.webp"
 import Artikelpng2 from "./../Assets/artikel2.webp"
@@ -75,115 +77,121 @@ import Obat3 from "./../Assets/obat3.png"
 import Obat4 from "./../Assets/obat4.png"
 import Obat5 from "./../Assets/obat5.png"
 
+// Lihat
+import Lihat from "./Lihat";
+
+// Footer
+import Footer from "./Footer";
+
+// Footer png
+import Footerpng from "./../Assets/halodoc-footer-logo.webp"
+import Footerpng2 from "./../Assets/google-play-badge.png"
+import Footerpng3 from "./../Assets/app-store-badge.png"
+import Footerpng4 from "./../Assets/daftar.svg"
 
 const Main = () => {
     return (
         <div>
-            <Navigation image={Logo}/>
+            <Navigation image={Logo} />
             <div style={{backgroundImage: `url(${Banner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 mt-5" >
+                <div className="row p-5">
+                    <div className="container p-0"> 
+                        <div className="col-4">
                             <h1 style={{fontSize: "32px"}}>Solusi Kesehatan Terlengkap</h1>
+                        </div>
+                        <div className="col-8">
                             <p className="col-7" style={{color: "gray"}}>Chat dokter, kunjungi rumah sakit, beli obat, cek lab dan update informasi seputar kesehatan, semua bisa di Halodoc!</p>
-                            <div className="container">
-                                <div className="row col-12">
-                                    <Kartu image={Card1} title="Chat Dengan Dokter"/>
-                                    <Kartu image={Card2} title="Toko Kesehatan"/>
-                                    <Kartu image={Card3} title="Buat Janji RS"/>
-                                    <Kartu image={Card4} title="Janji Medis"/>
-                                    <Kartu image={Card5} title="Layanan Home Lab"/>                                
-                                </div>
-                                <div className="row" style={{width: "32%", marginTop: "20px", marginBottom: "40px"}}>
-                                    <Asuransi image={Hero} title="Sambungkan Asuransimu" text="Dapatkan manfaat asuransi secara langsung untuk layanan Halodoc."/>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+                    <div className="container">
+                        <div className="row">
+                            <Kartu image={Card1} title="Chat Dengan Dokter"/>
+                            <Kartu image={Card2} title="Toko Kesehatan"/>
+                            <Kartu image={Card3} title="Buat Janji RS"/>
+                            <Kartu image={Card4} title="Janji Medis"/>
+                            <Kartu image={Card5} title="Layanan Home Lab"/>                                
+                        </div>
+                        <div className="row" style={{width: "32%", marginTop: "20px", marginBottom: "40px"}}>
+                            <Asuransi image={Hero} title="Sambungkan Asuransimu" text="Dapatkan manfaat asuransi secara langsung untuk layanan Halodoc."/>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className="container">
-                <div className="row col-12 justify-content-center">
-                    <h1 className="mt-5" style={{fontSize: "25px"}}>Layanan Khusus</h1>
-                    <div className="row gap-3 mt-4 justify-content-center">
-                        <div className="col-1">
-                            <Layanan image={Layanan1} title="Layanan Bidan"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan2} title="Tes COVID-19"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan3} title="Perawatan Diabetes"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan4} title="Kesehatan Jantung"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan5} title="Vaksinasi COVID-19"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan6} title="Kesehatan Kulit"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan7} title="Kesehatan Seksual"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan8} title="Kesehatan Mental"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan9} title="Kesehatan Hewan"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Layanan10} title="Parenting"/>
-                        </div>
+                
+                <div className="row justify-content-center gap-4 p-0">
+                    <h1 className="mt-5" style={{fontSize: "25px", padding: "0px"}}>Layanan Khusus</h1>
+                    <div className="col-1">
+                        <Layanan image={Layanan1} title="Layanan Bidan"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan2} title="Tes COVID-19"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan3} title="Perawatan Diabetes"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan4} title="Kesehatan Jantung"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan5} title="Vaksinasi COVID-19"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan6} title="Kesehatan Kulit"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan7} title="Kesehatan Seksual"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan8} title="Kesehatan Mental"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan9} title="Kesehatan Hewan"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Layanan10} title="Parenting"/>
+                    </div>     
+                </div>  
+            
+                <div className="row justify-content-center gap-4 mt-4 mb-5">
+                    <h1 style={{fontSize: "25px", padding: "0px"}}>Penunjang Kesehatan</h1>
+                    <div className="col-1">
+                        <Layanan image={Penunjang1} title="Cek Stress"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang2} title="Kalender Menstruasi"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang3} title="Kakulator BMI"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang4} title="Kalender Kehamilan"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang5} title="Risiko Jantung"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang6} title="Risiko Diabetes"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang7} title="Pengingat Obat"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang8} title="Donasi"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang9} title="Tes Depresi"/>
+                    </div>
+                    <div className="col-1">
+                        <Layanan image={Penunjang10} title="Tes Gangguan Kecemasan"/>
                     </div>
                 </div>  
-            </div>
-
-            <div className="container">
-                <div className="row col-12 justify-content-center">
-                    <h1 style={{fontSize: "25px"}}>Penunjang Kesehatan</h1>
-                    <div className="row gap-3 mt-4 justify-content-center">
-                        <div className="col-1 " >
-                            <Layanan image={Penunjang1} title="Cek Stress"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang2} title="Kalender Menstruasi"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang3} title="Kakulator BMI"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang4} title="Kalender Kehamilan"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang5} title="Risiko Jantung"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang6} title="Risiko Diabetes"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang7} title="Pengingat Obat"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang8} title="Donasi"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang9} title="Tes Depresi"/>
-                        </div>
-                        <div className="col-1">
-                            <Layanan image={Penunjang10} title="Tes Gangguan Kecemasan"/>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-
-            <div className="container">
-                <div className="row">
-                    <h1 className="mb-4 mt-4" style={{fontSize: "25px"}}>Penawaran Menarik</h1>
+            
+                <div className="row ">
+                    <h1 className="p-0" style={{fontSize: "25px"}}>Penawaran Menarik</h1>
                 </div>
-                <div className="row">
+                <div className="row pt-4 pb-4">
                     <div className="col-4">
                         <Penawaran image={Penawaran1}/>
                     </div>
@@ -194,34 +202,15 @@ const Main = () => {
                         <Penawaran image={Penawaran3}/>
                     </div>
                 </div>
-            </div>
 
-            <div className="container">
                 <div className="row mt-5">
                     <Artikel />
                 </div>
-            </div>
+                
 
             <div className="container">
-                <div className="row">
-                    <div className="col-1">
-                        <Artikel2 title="Terbaru"/>
-                    </div>
-                    <div className="col-1" style={{marginLeft: "-10px"}}>
-                        <Artikel2 title="Popular"/>
-                    </div>
-                    <div className="col-1" style={{marginLeft: "-9.5px"}}>
-                        <Artikel2 title="Kanker"/>
-                    </div>
-                    <div className="col-1" style={{marginLeft: "-15.4px"}}>
-                        <Artikel2 title="Cacar Monyet"/>
-                    </div>
-                    <div className="col-1" style={{marginLeft: "34px"}}>
-                        <Artikel2 title="Hepatitis"/>
-                    </div>
-                    <div className="col-2">
-                        <Artikel2 title="Kehamilan"/>
-                    </div>
+                <div className="row col-12">
+                    <Artikel2 img={Artikelimg} text="6 Menu Sehat dan Praktis untuk Makan Sahur" text2="Makanan Sehat" text3="“Agar puasa tetap lancar, kamu harus memperhatikan asupan makanan saat sah..."/>
                 </div>
             </div>
 
@@ -245,12 +234,11 @@ const Main = () => {
                 </div>
             </div>
 
-            <div className="container">
-                <div className="row mt-5">
-                    <h3>Obat & Vitamin</h3>
-                    <p>Dapatkan informasi seputar kandungan, aturan, petunjuk penggunaan obat dan vitamin di sini</p>
-                </div>
-                <div className="row" style={{marginTop: "20px", marginBottom: "20px", justifyContent: "center"}}>
+            <div className="row mt-5 p-0">
+                <h3 className="p-0">Obat & Vitamin</h3>
+                <p className="p-0">Dapatkan informasi seputar kandungan, aturan, petunjuk penggunaan obat dan vitamin di sini</p>
+            </div>
+                <div className="row p-0" style={{marginTop: "20px", marginBottom: "20px", justifyContent: "center"}}>
                     <div className="col-4">
                         <Obat image={Obat1} title="Obat Perawatan"/>
                     </div>
@@ -267,11 +255,15 @@ const Main = () => {
                         <Obat image={Obat5} title="Ramadhan"/>
                     </div>
                     <div className="col-4" style={{textAlign: "center", color: "#e0004d"}}>
-                        <Obat title="Lihat Semua"/>
+                        <Lihat text="Lihat Semua"/>
                     </div>
                 </div>
-            </div>
+        </div>
 
+
+            <div>
+                <Footer image={Footerpng} image2={Footerpng2} image3={Footerpng3} image4={Footerpng4}/>
+            </div>
 
         </div>
     )
